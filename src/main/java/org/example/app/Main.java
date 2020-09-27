@@ -2,6 +2,7 @@ package org.example.app;
 
 import org.example.app.generator.ErrorGenerator;
 import org.example.app.generator.HeapMemoryErrorGenerator;
+import org.example.app.generator.MetaSpaceErrorGenerator;
 
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class Main {
         }
 
         //generator implementation is to be chosen
-        ErrorGenerator generator = new HeapMemoryErrorGenerator();
+        ErrorGenerator generator = new MetaSpaceErrorGenerator();
         generator.generate(1000_000);
     }
 }
